@@ -58,23 +58,25 @@ console.log(`Names together: ${names.join(' ')}`)
 
 // 3. How do you access the last element of any array? (ARRAY.pop());
 console.log(`Accessed and removed last number in ages array: ${ages.pop()}`);
-console.log(`Accessed and removed last name in names array: ${names.pop()}`);
+//console.log(`Accessed and removed last name in names array: ${names.pop()}`);
 
 // 4. How do you access the first element of any array? (ARRAY.shift());
 console.log(`Accessed and removed first number in ages array: ${ages.shift()}`);
-console.log(`Accessed and removed first name in names array: ${names.shift()}`);
+//console.log(`Accessed and removed first name in names array: ${names.shift()}`);
 
 // 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the-
 // -nameLengths array
-let namesLengths = [3,5,3,5,4,3]
-console.log(`Names Length Array: ${namesLengths}`);
+let namesLengths = names.map(function(lengthOfNames) {
+   return lengthOfNames.length;
+});
+console.log(`New array namesLengths: ${namesLengths}`);
 
 // 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 sum = 0
 for (let number of namesLengths) {
     sum += number;
 }
-console.log(`Calculated sum of all the elements in the namesLength array: ${sum}`);
+console.log(`Calculated sum of all the elements in the namesLengths array: ${sum}`);
 
 // 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times
 function arguments(word, n) {
